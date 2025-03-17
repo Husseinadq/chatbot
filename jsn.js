@@ -130,7 +130,7 @@
             createChatWidget();
         }
     }
-    if(true){
+    if(false){
         initChatWidget();
     }
 
