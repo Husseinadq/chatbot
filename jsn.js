@@ -130,25 +130,28 @@
             createChatWidget();
         }
     }
+    if(true){
+        initChatWidget();
+    }
 
     // Send a POST request to check if the store id is allowed
-    fetch("https://ai.trameaz.com/api/isalowd", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ storeId: storeId })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Check for allowed response (adapt this condition based on your API's response structure)
-        if (data === true || data.allowed === true) {
-            initChatWidget();
-        } else {
-            console.warn("Store not allowed: Chat widget will not load.");
-        }
-    })
-    .catch(error => {
-        console.error("Error during store validation:", error);
-    });
+    // fetch("https://ai.trameaz.com/api/isalowd", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify({ storeId: storeId })
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     // Check for allowed response (adapt this condition based on your API's response structure)
+    //     if (data === true || data.allowed === true) {
+    //         initChatWidget();
+    //     } else {
+    //         console.warn("Store not allowed: Chat widget will not load.");
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error("Error during store validation:", error);
+    // });
 })();
