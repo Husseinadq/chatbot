@@ -130,7 +130,7 @@
             createChatWidget();
         }
     }
-    if(false){
+    if(storeId=="1"){
         initChatWidget();
     }
 
